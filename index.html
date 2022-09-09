@@ -138,12 +138,8 @@
 				<form class="subscribe-form" action="" method="GET">
 					<!-- <div class="subscribe-input">Email Address...</div>
 					<a class="subscribe-button">Subscribe</a> -->
-					<div class="subscribe-input">
-						<input type="email" name="email" placeholder="Email Address...">
-					</div>
-					<div class="subscribe-button">
-						<button type="submit">Subscribe</button>
-					</div>
+					<input class="subscribe-input" type="email" name="email" placeholder="Email Address..." id="email-form-1" required>
+					<button class="subscribe-button" type="submit">Subscribe</button>
 				</form>
 			</section>
 			<div class="get-in-touch">
@@ -155,12 +151,18 @@
 						<hr class="header-line feedback-line">
 					</section>
 					<section class="feedback-body">
-						<div class="feedback-form">
+						<!-- <div class="feedback-form">
 							<div class="feedback-input feedback-name">Name</div>
 							<div class="feedback-input feedback-mail">Your Mail</div>
 							<div class="feedback-input feedback-message">Type your message</div>
 							<a class="feedback-button">Send message</a>
-						</div>
+						</div> -->
+						<form class="feedback-form" action="" method="GET">
+							<input class="feedback-input feedback-name" type="text" name="get-in-touch" placeholder="Name" required>
+							<input class="feedback-input feedback-mail" type="email" name="get-in-touch" placeholder="Your Mail" required>
+							<input class="feedback-input feedback-message" type="text" name="get-in-touch" placeholder="Type your message" required>
+							<button class="feedback-button" type="submit">Send Message</button>
+						</form>
 					</section>
 				</section>
 				</section>

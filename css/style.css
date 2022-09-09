@@ -209,22 +209,18 @@ h3 {
 	margin: 0;
 	font-size: 60px;
 	line-height: 1.2;
-	/* Чтобы высота строки оставалась пропорциональной разному размеру шрифта, можно указать ее без единиц измерения. Тогда она бужет зависеть от размера шрифта. */
 	font-weight: bold;
 	text-transform: uppercase;
 	margin-bottom: 18px;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-weight: 800;
 	letter-spacing: 1.5px;
-	/* Свойство letter-spacing позволяет изменить межбуквенное расстояние. */
 }
 
 .page-1-heading-parametres {
 	letter-spacing: 6px;
 	word-break: break-word;
 	hyphens: auto;
-	/* Свойство word-break заставляет слова переноситься по буквам, если они не помещаются в родительский элемент.
-	Свойство hyphens добавляет дефис в месте переноса (может работать не во всех браузерах) */
 }
 
 .page-1-text {
@@ -592,7 +588,11 @@ h3 {
 }
 
 .subscribe-form .subscribe-input {
-	color: #8e8e8e;
+	color: #2C2C2C;
+	font-size: 16px;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	line-height: 24px;
+	letter-spacing: 0.4px;
 	display: flex;
 	align-items: center;
 	box-sizing: border-box;
@@ -672,7 +672,9 @@ h3 {
 }
 
 .feedback-input {
-	color: #8e8e8e;
+	color: #000000;
+	font-size: 16px;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	box-sizing: border-box;
 	padding-left: 54px;
 	padding-right: 54px;
@@ -693,18 +695,14 @@ h3 {
 }
 
 .feedback-message {
+	line-height: 28px;
 	resize: none;
 	font-size: 16px;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	width: 100%;
 	max-width: 731px;
 	height: 252px;
-	box-sizing: border-box;
-	padding: 35px 54px;
-	margin-bottom: 45px;
-	border: none;
-	border-radius: 5px;
-	background-color: #f3f3f3;	
+	padding-bottom: 160px;
 }
 
 .feedback-button {
@@ -813,6 +811,12 @@ h3 {
 		margin-right: 1vw;
 	}
 
+	.feedback {
+		margin-bottom: 30px;
+		padding: 0 1vw;
+		margin: 0 auto;
+	}
+
 	.feedback-left-box {
 		flex: 0 1 auto;
 	}
@@ -822,10 +826,20 @@ h3 {
 	}
 
 	.contacts {
+		flex-wrap: wrap;
 		width: 100%;
-		max-width: 100%;
-		grid-column: 1 / 6;
-		grid-row: 2 / 3;
+		max-width: 100%;	
+	}
+
+	.get-in-touch {
+		flex-wrap: wrap;
+		padding-left: initial;
+		padding-right: initial;
+		padding-bottom: 0;
+	}
+
+	.feedback-left {
+		flex: 0 1 auto;
 	}
 }
 
@@ -889,13 +903,27 @@ h3 {
 		padding-left: 20px;
 	}
 
+	.page-1-intro {
+		flex-wrap: wrap;
+	}
+
+	.page-1-img {
+		width: 100%;
+		height: auto;
+	}
+
+	.page-1-img-link {
+		width: 100%;
+		height: auto;
+	}
+
 @media screen and (max-width: 400px) {
 	.subscribe-form {
 		flex-wrap: wrap;
 	}
 
 	.page-1-intro {
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 	}
 
 	.page-1-left {
@@ -909,11 +937,16 @@ h3 {
 		font-size: 5vw;
 	}
 
-	.page-1-img-link {
-		width: 50%;
+	.page-1-intro {
+		flex-wrap: wrap;
 	}
 
 	.page-1-img {
+		width: 100%;
+		height: auto;
+	}
+
+	.page-1-img-link {
 		width: 100%;
 		height: auto;
 	}

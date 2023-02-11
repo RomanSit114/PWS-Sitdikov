@@ -1,3 +1,4 @@
+/* Этап 1. Подготовка данных */
 const parser = new DOMParser();
 
 const xmlString = `
@@ -21,6 +22,8 @@ const xmlString = `
 </list>
 `;
 
+/* Этап 2. Получение данных */
+// Парсинг XML
 const xmlDOM = parser.parseFromString(xmlString, "text/xml");
 const students = xmlDOM.querySelectorAll("student");
 
@@ -31,8 +34,11 @@ students.forEach((item) => {
     const secondNode = name.querySelector("second");
     const ageNode = item.querySelector("age");
     const profNode = item.querySelector("prof");
+  
+    // Получение данных из атрибутов
     const nameAttr = name.getAttribute('lang');
   
+    /* Этап 3. Запись данных в массив */
     list.push({
       name: `${firstNode.textContent} ${secondNode.textContent}`,
       age: Number(ageNode.textContent),

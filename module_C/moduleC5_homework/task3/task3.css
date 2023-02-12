@@ -1,0 +1,16 @@
+.card {
+  width: 300px;
+  margin: 20px;
+}
+
+.card-image {
+  display: block;
+  width: 200px;
+  height: 150px;
+}
+
+.output_pictures {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+}
